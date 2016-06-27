@@ -15,20 +15,14 @@ class proxy_client (
   $profile_d   = $::proxy_client::params::profile_d,
 ) inherits proxy_client::params {
 
-  File {
-    owner => 'root',
-    group => 'root',
-    mode  => '0644',
-  }
-
-  file {$profild_d:
+  file {$profile_d:
     ensure => directory,
   }
 
   file {'proxy_profile':
     ensure  => file,
     path    => "$profile_d/proxy.sh",
-    content => template('modules/proxy_client/proxy.sh.erb'),
+    content => template('proxy_client/proxy.sh.erb'),
   }
 
 }
