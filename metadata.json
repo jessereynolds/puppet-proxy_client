@@ -1,0 +1,15 @@
+{
+  "name": "jesse/proxy_client",
+  "version": "0.1.0",
+  "author": "Jesse Reynolds",
+  "summary": "Configures environment variables and such like so machines may access the internet via proxy.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/jessereynolds/puppet-proxy_client",
+  "project_page": "https://github.com/jessereynolds/puppet-proxy_client",
+  "issues_url": "https://github.com/jessereynolds/puppet-proxy_client/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+

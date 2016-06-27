@@ -1,0 +1,11 @@
+# Warning: This file is managed by Puppet.
+# Reference: https://www.w3.org/Daemon/User/Proxies/ProxyClients.html
+export http_proxy="<%= @http_proxy %>"
+export https_proxy="<%= @https_proxy %>"
+export no_proxy="<%= @no_proxy.join(',') %>"
+
+# In case the user-agent expects shouty environment variables:
+export HTTP_PROXY="$http_proxy"
+export HTTPS_PROXY="$https_proxy"
+export NO_PROXY="$no_proxy"
+
