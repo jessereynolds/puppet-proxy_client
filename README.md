@@ -15,10 +15,10 @@ This module configures your proxy environment variables.
 Call it like this:
 
 ```puppet
-proxy_client {
-  http_proxy => 'http://proxy.example:3128',
+class {'proxy_client':
+  http_proxy  => 'http://proxy.example:3128',
   https_proxy => 'http://proxy.example:3128',
-  no_proxy => ['puppet.example','10.0.99.1']
+  no_proxy    => ['puppet.example','10.0.99.1']
 }
 ```
 
