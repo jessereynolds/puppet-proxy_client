@@ -22,6 +22,17 @@ class {'proxy_client':
 }
 ```
 
+This module can ensure that folder /etc/profile.d exist on the system, default is false :
+
+```puppet
+class {'proxy_client':
+  manage_profile => true,
+  http_proxy     => 'http://proxy.example:3128',
+  https_proxy    => 'http://proxy.example:3128',
+  no_proxy       => ['puppet.example','10.0.99.1']
+}
+```
+
 ## Limitations
 
 Currently only supports RedHat.
