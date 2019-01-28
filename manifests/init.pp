@@ -1,3 +1,7 @@
+# [*manage_profile*]
+# Boolean if true this modile ensure that $profile_d is a directory
+# default set to false
+#
 # Examples
 # --------
 #
@@ -9,14 +13,17 @@
 #    }
 #
 class proxy_client (
-  $http_proxy  = undef,
-  $https_proxy = undef,
-  $no_proxy    = [],
-  $profile_d   = $::proxy_client::params::profile_d,
+  $http_proxy     = undef,
+  $https_proxy    = undef,
+  $no_proxy       = [],
+  Boolean $manage_profile = false,
+  $profile_d      = $::proxy_client::params::profile_d,
 ) inherits proxy_client::params {
 
-  file {$profile_d:
-    ensure => directory,
+  if $manage_profile {
+    file { $profile_d:
+      ensure => directory,
+    }
   }
 
   file {'proxy_profile':
