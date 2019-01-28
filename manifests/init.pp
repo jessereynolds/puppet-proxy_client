@@ -13,11 +13,11 @@
 #    }
 #
 class proxy_client (
-  $http_proxy     = undef,
-  $https_proxy    = undef,
-  $no_proxy       = [],
+  $http_proxy             = undef,
+  $https_proxy            = undef,
+  $no_proxy               = [],
   Boolean $manage_profile = false,
-  $profile_d      = $::proxy_client::params::profile_d,
+  $profile_d              = $::proxy_client::params::profile_d,
 ) inherits proxy_client::params {
 
   if $manage_profile {
