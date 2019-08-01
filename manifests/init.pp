@@ -13,11 +13,11 @@
 #    }
 #
 class proxy_client (
-  $http_proxy             = undef,
-  $https_proxy            = undef,
-  $no_proxy               = [],
-  Boolean $manage_profile = false,
-  $profile_d              = $::proxy_client::params::profile_d,
+  Optional[String] $http_proxy     = undef,
+  Optional[String] $https_proxy    = undef,
+  Array[String[1]] $no_proxy       = [],
+  Boolean          $manage_profile = false,
+  String           $profile_d      = $::proxy_client::params::profile_d,
 ) inherits proxy_client::params {
 
   if $manage_profile {
@@ -26,9 +26,9 @@ class proxy_client (
     }
   }
 
-  file {'proxy_profile':
+  file { 'proxy_profile':
     ensure  => file,
-    path    => "$profile_d/proxy.sh",
+    path    => "${profile_d}/proxy.sh",
     content => template('proxy_client/proxy.sh.erb'),
   }
 
