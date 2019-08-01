@@ -1,6 +1,6 @@
 {
   "name": "jesse-proxy_client",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Jesse Reynolds",
   "summary": "Configures environment variables and such like so machines may access the internet via proxy.",
   "license": "Apache-2.0",
@@ -8,10 +8,6 @@
   "project_page": "https://github.com/jessereynolds/puppet-proxy_client",
   "issues_url": "https://github.com/jessereynolds/puppet-proxy_client/issues",
   "dependencies": [
-    {
-      "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 1.0.0"
-    }
   ],
   "operatingsystem_support": [
     {
@@ -19,49 +15,12 @@
       "operatingsystemrelease": [
         "7"
       ]
-    },
-    {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "8"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
-      "operatingsystemrelease": [
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "9"
-      ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "18.04"
-      ]
-    },
-    {
-      "operatingsystem": "windows",
-      "operatingsystemrelease": [
-        "2019",
-        "10"
-      ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.10.0 < 7.0.0"
+      "version_requirement": ">= 4.0.0 < 7.0.0"
     }
   ],
   "pdk-version": "1.12.0",
